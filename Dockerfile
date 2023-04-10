@@ -1,7 +1,7 @@
 FROM node:alpine
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
-ENV NODE_OPTIONS = "--openssl-legacy-provider"
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # We don't need to do this cache clean, I guess it wastes time / saves space: https://github.com/yarnpkg/rfcs/pull/53
 RUN set -ex; \
